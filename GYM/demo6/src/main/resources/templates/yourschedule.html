@@ -124,9 +124,9 @@
 
 
             mobiscroll.setOptions({
-        locale: mobiscroll.localeEn,                                          // Specify language like: locale: mobiscroll.localePl or omit setting to use default
-        theme: 'ios',                                                         // Specify theme like: theme: 'ios' or omit setting to use default
-        themeVariant: 'light'                                                 // More info about themeVariant: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#opt-themeVariant
+        locale: mobiscroll.localeEn,
+        theme: 'ios',
+        themeVariant: 'light'
     });
     
     (function () {
@@ -164,7 +164,7 @@
             timer = null;
     
             tooltip.setOptions({
-                anchor: args.domEvent.currentTarget || args.domEvent.target,  // More info about anchor: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#opt-anchor
+                anchor: args.domEvent.currentTarget || args.domEvent.target,
                 closeOnOverlayClick: closeOption
             });
             tooltip.open();
@@ -190,7 +190,7 @@
         var loc = document.getElementById('tooltip-event-location');
     
         var calendar = mobiscroll.eventcalendar('#demo-custom-event-tooltip', {
-            view: {                                                           // More info about view: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#opt-view
+            view: {
                 schedule: {
                     type: 'week',
                     startDay: 0,
@@ -200,8 +200,8 @@
                     allDay: false
                 }
             },
-            resources: doctors,                                               // More info about resources: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#opt-resources
-            // data: [{                                                          // More info about data: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#opt-data
+            resources: doctors,
+            // data: [{
             //     title: 'Jude Chester', //môn học
             //     start: '2022-12-03T08:00',
             //     end: '2022-12-03T08:45',
@@ -211,20 +211,20 @@
             //     resource: 1
             // }],
             data:yourschedule, //lấy dữ liệu từ database!!
-            clickToCreate: false,                                             // More info about clickToCreate: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#opt-clickToCreate
-            dragToCreate: false,                                              // More info about dragToCreate: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#opt-dragToCreate
-            showEventTooltip: false,                                          // More info about showEventTooltip: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#opt-showEventTooltip
-            onEventHoverIn: function (args) {                                 // More info about onEventHoverIn: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#event-onEventHoverIn
+            clickToCreate: false,
+            dragToCreate: false,
+            showEventTooltip: false,
+            onEventHoverIn: function (args) {
                 openTooltip(args, false);
             },
-            onEventHoverOut: function () {                                    // More info about onEventHoverOut: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#event-onEventHoverOut
+            onEventHoverOut: function () {
                 if (!timer) {
                     timer = setTimeout(function () {
                         tooltip.close();
                     }, 200);
                 }
             },
-            onEventClick: function (args) {                                   // More info about onEventClick: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#event-onEventClick
+            onEventClick: function (args) {
                 if (!tooltip.isVisible()) {
                     openTooltip(args, true);
                 }
@@ -233,13 +233,13 @@
 
 
         var tooltip = mobiscroll.popup('#custom-event-tooltip-popup', {
-            display: 'anchored',                                              // Specify display mode like: display: 'bottom' or omit setting to use default
+            display: 'anchored',
             touchUi: false,
             showOverlay: false,
             contentPadding: false,
             closeOnOverlayClick: false,
-            width: 350,                                                       // More info about width: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#opt-width
-            onInit: function () {                                             // More info about onInit: https://docs.mobiscroll.com/5-20-0/javascript/eventcalendar#event-onInit
+            width: 350,
+            onInit: function () {
                 tooltip.addEventListener('mouseenter', function (e) {
                     if (timer) {
                         clearTimeout(timer);

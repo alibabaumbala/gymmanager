@@ -256,9 +256,9 @@
   myData = idModified
   console.log(myData)
   mobiscroll.setOptions({
-    locale: mobiscroll.localeEn,                    // Specify language like: locale: mobiscroll.localePl or omit setting to use default
-    theme: 'ios',                                   // Specify theme like: theme: 'ios' or omit setting to use default
-    themeVariant: 'light'                       // More info about themeVariant: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-themeVariant
+    locale: mobiscroll.localeEn,
+    theme: 'ios',
+    themeVariant: 'light'
   });
 
   $(function () {
@@ -297,8 +297,8 @@
 
       // set popup header text and buttons for adding
       popup.setOptions({
-        headerText: 'Xếp Lịch',                // More info about headerText: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-headerText
-        buttons: ['cancel', {                   // More info about buttons: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-buttons
+        headerText: 'Xếp Lịch',
+        buttons: ['cancel', {
           text: 'Add',
           keyCode: 'enter',
           handler: function ()
@@ -426,8 +426,8 @@
 
       // set popup header text and buttons for editing
       popup.setOptions({
-        headerText: 'Xếp lịch HLV',               // More info about headerText: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-headerText
-        buttons: ['cancel', {                   // More info about buttons: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-buttons
+        headerText: 'Xếp lịch HLV',
+        buttons: ['cancel', {
           text: 'Save',
           keyCode: 'enter',
           handler: function () {
@@ -505,22 +505,22 @@
     }
 
     var calendar = $('#demo-add-delete-event').mobiscroll().eventcalendar({
-      clickToCreate: 'double',                    // More info about clickToCreate: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-clickToCreate
-      dragToCreate: true,                         // More info about dragToCreate: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-dragToCreate
-      dragToMove: true,                           // More info about dragToMove: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-dragToMove
-      dragToResize: true,                         // More info about dragToResize: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-dragToResize
-      view: {                                     // More info about view: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-view
+      clickToCreate: 'double',
+      dragToCreate: true,
+      dragToMove: true,
+      dragToResize: true,
+      view: {
         calendar: { labels: true }
       },
-      data: myData,                               // More info about data: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-data
-      onEventClick: function (args) {             // More info about onEventClick: https://docs.mobiscroll.com/5-20-0/eventcalendar#event-onEventClick
+      data: myData,
+      onEventClick: function (args) {
         oldEvent = $.extend({}, args.event);
         tempEvent = args.event;
         if (!popup.isVisible()) {
           createEditPopup(args);
         }
       },
-      onEventCreated: function (args) {           // More info about onEventCreated: https://docs.mobiscroll.com/5-20-0/eventcalendar#event-onEventCreated
+      onEventCreated: function (args) {
         popup.close();
 
         // store temporary event
@@ -594,7 +594,7 @@
       endInput: '#end-input',
       showRangeLabels: false,
       touchUi: true,
-      responsive: datePickerResponsive,           // More info about responsive: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-responsive
+      responsive: datePickerResponsive,
       onChange: function (args) {
         var date = args.value;
 
@@ -644,11 +644,11 @@
     });
 
     colorPicker = $('#demo-event-color').mobiscroll().popup({
-      display: 'bottom',                          // Specify display mode like: display: 'bottom' or omit setting to use default
+      display: 'bottom',
       contentPadding: false,
       showArrow: false,
       showOverlay: false,
-      buttons: [                                  // More info about buttons: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-buttons
+      buttons: [
         'cancel',
         {
           text: 'Set',
@@ -659,11 +659,11 @@
           cssClass: 'mbsc-popup-button-primary'
         }
       ],
-      responsive: {                               // More info about responsive: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-responsive
+      responsive: {
         medium: {
-          display: 'anchored',                // Specify display mode like: display: 'bottom' or omit setting to use default
-          anchor: $('#event-color-cont')[0],  // More info about anchor: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-anchor
-          buttons: {},                        // More info about buttons: https://docs.mobiscroll.com/5-20-0/eventcalendar#opt-buttons
+          display: 'anchored',
+          anchor: $('#event-color-cont')[0],
+          buttons: {},
         }
       }
     }).mobiscroll('getInst');
