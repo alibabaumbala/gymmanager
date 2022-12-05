@@ -135,7 +135,7 @@
                       </div>
 
                       <div class="login-input-item">
-                        <input id="sdt" name="sdt" type="text" th:field="*{sdtkh}" placeholder="Số điện thoại" class="form-control" required pattern="[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
+                        <input id="sdt" name="sdt" type="text" th:field="*{sdtkh}" placeholder="Số điện thoại" class="form-control" required pattern="[0]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
                       </div>
                       <div class="login-input-item">
                         <input name="password" id="passworddk" th:field="*{password}" type="password" placeholder="Mật khẩu" class="form-control" required>
@@ -208,7 +208,7 @@
 <!--MODAL AFTER REGIST SUCCESS -->
 <script>
   $('#passworddk, #confirm_password').on('keyup', function () {
-    if ($('#password').val() == $('#confirm_password').val()) {
+    if ($('#passworddk').val() == $('#confirm_password').val()) {
       $('#message').html('Hợp lệ').css('color', 'green');
     } else
       $('#message').html('Không hợp lệ').css('color', 'red');
@@ -218,7 +218,8 @@
 
   function regist()
   {
-    if ($('#password').val() != $('#confirm_password').val() || $("#file").val()=='')
+    console.log($("#hoten").val())
+    if ($('#passworddk').val() != $('#confirm_password').val() || $("#file").val()=='' || $('#passworddk').val().length<6 || /^[a-z\sA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$/.test($('#hoten').val())==false)
     {
       return false;
     }

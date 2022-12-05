@@ -90,7 +90,8 @@
       </div>
 
       <div class="activity-data">
-
+        <div th:if="${employee.positionemp}=='Quản lý'" th:replace="~{quanly/chart2.html}"></div>
+<!--        <div th:if="${employee.positionemp}=='Quản lý'" th:replace="~{quanly/chart.html}"></div>-->
       </div>
     </div>
   </div>

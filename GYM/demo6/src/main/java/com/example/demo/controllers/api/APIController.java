@@ -209,8 +209,8 @@ public class APIController {
         String gender = requestParam.get("gender");
         String makh = requestParam.get("makh");
         String level = requestParam.get("level");
-
-        khachhangRepository.updateKHFromAdmin(tenkh,sdtkh,emailkh,gender,level,makh);
+        String status = requestParam.get("status");
+        khachhangRepository.updateKHFromAdmin(tenkh,sdtkh,emailkh,gender,level,status,makh);
         return khachhangRepository.getKhachHangByMaKH(makh);
     }
     //THÊM KHÁCH HÀNG

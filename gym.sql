@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 04, 2022 lúc 07:13 PM
+-- Thời gian đã tạo: Th12 05, 2022 lúc 10:55 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 7.4.28
 
@@ -59,13 +59,13 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`idemp`, `tenemp`, `sdtemp`, `emailemp`, `genderemp`, `positionemp`, `passemp`, `createemp`, `avatar`) VALUES
-('lt000001', 'Minh Hằng', '0874214314', 'minhhang@gmail.com', 'Male', 'Lễ tân', '123456', '2022-10-11 17:53:03', 'https://scontent.fsgn9-1.fna.fbcdn.net/v/t39.30808-6/316090422_829751481567201_6711936184425690336_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=tAHTEJVO-3UAX_kaFCe&_nc_ht=scontent.fsgn9-1.fna&oh=00_AfCy2-6VLaES_gU8wVU2hj0uFJ3dfucljLwp4tel7PT_4w&oe=638F66CD'),
+('kt000003', 'Trần Tuấn Anh', '0879748777', 'tuananh@gmail.com', 'Male', 'Kế toán', '123456', '2022-12-01 04:00:30', 'https://scontent.fsgn9-1.fna.fbcdn.net/v/t39.30808-6/251847645_588028892406129_260423726795685004_n.jpg?stp=dst-jpg_s851x315&_nc_cat=106&ccb=1-7&_nc_sid=da31f3&_nc_ohc=x3EOjN_6Vc4AX9e_Vjm&_nc_ht=scontent.fsgn9-1.fna&oh=00_AfA4ffQ1gajtTX54zM8X4ejt38HO6_5BMkTDAtHqbIn_WQ&oe=638F74E2'),
 ('lt000002', 'Đông Nhi', '0214784596', 'dongnhi@gmail.com', 'Male', 'Lễ tân', '123456', '2022-10-30 17:52:20', 'https://scontent.fsgn9-1.fna.fbcdn.net/v/t1.6435-9/144668330_424056938803326_1842097521700667_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_ohc=YqEQlaR0DgMAX-ajd-S&tn=KWoGFGK0B3e-EmZW&_nc_ht=scontent.fsgn9-1.fna&oh=00_AfCGrJoIZJ_91qoKtflaYAYZtmeDyQuRIMiCoRWcyHxCqw&oe=63B27C23'),
-('lt000003', 'Trần Tuấn Anh', '0879748777', 'tuananh@gmail.com', 'Male', 'Kế toán', '123456', '2022-12-01 04:00:30', 'https://scontent.fsgn9-1.fna.fbcdn.net/v/t39.30808-6/251847645_588028892406129_260423726795685004_n.jpg?stp=dst-jpg_s851x315&_nc_cat=106&ccb=1-7&_nc_sid=da31f3&_nc_ohc=x3EOjN_6Vc4AX9e_Vjm&_nc_ht=scontent.fsgn9-1.fna&oh=00_AfA4ffQ1gajtTX54zM8X4ejt38HO6_5BMkTDAtHqbIn_WQ&oe=638F74E2'),
 ('lt000004', 'Hồ Ngọc Hà', '0574126981', 'hnh@gmail.com', 'Female', 'Lễ tân', '123456', '2022-12-01 11:35:26', 'https://scontent.fsgn9-1.fna.fbcdn.net/v/t39.30808-6/275472664_664022294806788_3854882512238726504_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=19026a&_nc_ohc=93QhKO5coMQAX9FZ70f&_nc_ht=scontent.fsgn9-1.fna&oh=00_AfDc57da1BIJ1Se_fBMgXLj0dOQ7Twpi4Dl_H5PEjFTrig&oe=63904BEF'),
 ('ql000003', 'Tóc Tiên', '0965874231', 'toctien@gmail.com', 'Female', 'Quản lý', '123456', '2022-08-03 13:56:37', 'https://scontent.fsgn9-1.fna.fbcdn.net/v/t1.6435-9/198152502_502686704273682_104451209091447411_n.jpg?stp=c0.169.827.827a_dst-jpg_s851x315&_nc_cat=104&ccb=1-7&_nc_sid=da31f3&_nc_ohc=VJllLKZA-VEAX-hwsNz&tn=KWoGFGK0B3e-EmZW&_nc_ht=scontent.fsgn9-1.fna&oh=00_AfBTilLK4pHvrIn_U4Pg0mc89jlM9uStnSD-agJP_Vt1Ng&oe=63B27E06'),
 ('ql000004', 'Nguyễn Thúc Thùy Tiên', '0547411336', 'nttt@gmail.com', 'Male', 'Quản lý', '123456', '2022-11-30 17:44:03', 'https://scontent.fsgn9-1.fna.fbcdn.net/v/t39.30808-6/316090422_829751481567201_6711936184425690336_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=tAHTEJVO-3UAX_kaFCe&_nc_ht=scontent.fsgn9-1.fna&oh=00_AfCy2-6VLaES_gU8wVU2hj0uFJ3dfucljLwp4tel7PT_4w&oe=638F66CD'),
-('ql000005', 'Noo Phước Thịnh', '0547841322', 'noopt@gmail.com', 'Male', 'Quản lý', '123456', '2022-12-01 10:41:05', 'https://scontent.fsgn9-1.fna.fbcdn.net/v/t39.30808-6/316090422_829751481567201_6711936184425690336_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=tAHTEJVO-3UAX_kaFCe&_nc_ht=scontent.fsgn9-1.fna&oh=00_AfCy2-6VLaES_gU8wVU2hj0uFJ3dfucljLwp4tel7PT_4w&oe=638F66CD');
+('ql000005', 'Noo Phước Thịnh', '0547841322', 'noopt@gmail.com', 'Male', 'Quản lý', '123456', '2022-12-01 10:41:05', 'https://scontent.fsgn9-1.fna.fbcdn.net/v/t39.30808-6/316090422_829751481567201_6711936184425690336_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=tAHTEJVO-3UAX_kaFCe&_nc_ht=scontent.fsgn9-1.fna&oh=00_AfCy2-6VLaES_gU8wVU2hj0uFJ3dfucljLwp4tel7PT_4w&oe=638F66CD'),
+('ql000006', 'Thúy Vân', '0178746642', 'minhhang@gmail.com', 'Male', 'Quản lý', '123456', '2022-12-05 14:07:58', 'https://scontent.fsgn9-1.fna.fbcdn.net/v/t39.30808-6/316090422_829751481567201_6711936184425690336_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=tAHTEJVO-3UAX_kaFCe&_nc_ht=scontent.fsgn9-1.fna&oh=00_AfCy2-6VLaES_gU8wVU2hj0uFJ3dfucljLwp4tel7PT_4w&oe=638F66CD');
 
 -- --------------------------------------------------------
 
@@ -110,8 +110,8 @@ CREATE TABLE `khachhang` (
 INSERT INTO `khachhang` (`makh`, `tenkh`, `sdtkh`, `emailkh`, `gender`, `password`, `role`, `level`, `point`, `status`, `createaccount`) VALUES
 ('LAe516ET', 'Châu Đăng Khoa', '0321458777', 'vipbigbang5xxx@gmail.com', 'Male', '736035', 'ROLE_USER', 'KHÁCH HÀNG THƯỜNG', 0, 'Hoạt động', '2022-12-03 20:59:44'),
 ('mMr0u8XA', 'Mai Hồng Ngọc', '0123456789', 'khoanguyen30lb@gmail.com', 'Male', '123456', 'ROLE_USER', 'KHÁCH HÀNG VIP', 20, 'Hoạt động', '2022-11-30 10:30:18'),
-('R68ctS7p', 'Nguyễn Thị Anh Thư', '0929099064', 'vanhuy1619@gmail.com', 'Female', '123456', 'ROLE_USER', 'KHÁCH HÀNG THƯỜNG', 0, 'Hoạt động', '2022-11-29 19:36:37'),
-('vxgKNV4R', 'Lê Mỹ Anh', '0784254785', 'lemyanh@gmail.com', 'Female', '585204', 'ROLE_USER', 'KHÁCH HÀNG THƯỜNG', 0, 'Hoạt động', '2022-12-03 21:52:54');
+('R68ctS7p', 'Nguyễn Thị Anh Thư', '0929099064', 'vanhuy1619@gmail.com', 'Female', '123456', 'ROLE_USER', 'KHÁCH HÀNG VIP', 0, 'Hoạt động', '2022-11-29 19:36:37'),
+('vxgKNV4R', 'Lê Mỹ Anh', '0784254785', 'lemyanh@gmail.com', 'Female', '585204', 'ROLE_USER', 'KHÁCH HÀNG THƯỜNG', 0, 'Chờ duyệt', '2022-12-03 21:52:54');
 
 -- --------------------------------------------------------
 
@@ -169,7 +169,13 @@ INSERT INTO `tapthu` (`stt`, `tenkh`, `sdtkh`, `email`, `bomon`, `thoigian`, `da
 (28, 'Phú Quốc', '0928746525', 'phuquoc@gmail.com', 'groupx', '6h30-7h30', '2022-12-01 14:56:55'),
 (30, 'Mai Hồng Ngọc', '0145645520', 'maihn@gmail.com', 'yoga', '12h-13h', '2022-12-01 15:00:58'),
 (31, 'Anh Thu', '0927779063', 'anhthu@gmail.com', 'yoga', '8h-9h', '2022-12-01 15:02:20'),
-(32, 'Mai Hồng Ngọc', '0123456777', 'mvmanh@gmail.com', 'groupx', '6h30-7h30', '2022-12-03 22:34:56');
+(32, 'Mai Hồng Ngọc', '0123456777', 'mvmanh@gmail.com', 'groupx', '6h30-7h30', '2022-12-03 22:34:56'),
+(34, 'Mai Hồng Ngọc', '0929099063', 'mvmanh@gmail.com', 'groupx', '6h30-7h30', '2022-12-05 13:48:08'),
+(35, 'Mai Hồng Ngọc', '092909906', 'mvmanh@gmail.com', 'groupx', '6h30-7h30', '2022-12-05 13:48:55'),
+(36, 'Mai Hồng Ngọc', '1929099068', 'mvmanh@gmail.com', 'groupx', '6h30-7h30', '2022-12-05 13:49:02'),
+(37, 'Anh Thu', '', '', 'yoga', '8h-9h', '2022-12-05 14:02:51'),
+(38, 'Anh Thu', '0178474565', 'mvmanh@gmail.com', 'yoga', '8h-9h', '2022-12-05 14:03:04'),
+(39, 'Anh Thu2', '0658999666', 'kwonjiyong2702@gmail.com', 'groupx', '6h30-7h30', '2022-12-05 14:03:21');
 
 -- --------------------------------------------------------
 
@@ -245,12 +251,11 @@ INSERT INTO `training` (`stt`, `idteacher`, `bomonday`, `phongday`, `allday`, `t
 (70, 'tc007', 'Yoga Mix', 'L1-08', 'false', '2022-12-09T08:30', '2022-12-09T09:30', '#3f51b5', '2022-12-03 19:09:37'),
 (72, 'tc006', 'Kit Fit', 'T-03', 'true', '2022-12-04', '2022-12-04', '#5ac8fa', '2022-12-04 11:21:05'),
 (73, 'tc004', 'Yoga Balance', 'T-05', 'true', '2022-12-04', '2022-12-04', '#5ac8fa', '2022-12-04 11:21:30'),
-(74, 'tc008', 'Cycling', 'L3-01', 'true', '2022-12-04', '2022-12-04', '#5ac8fa', '2022-12-04 11:21:50'),
-(75, 'tc003', 'Sexy Dance', 'L2-01', 'false', '2022-12-05T17:00', '2022-12-05T19:00', '#7e5d4e', '2022-12-04 11:22:44'),
 (76, 'tc006', 'Pole Fit', 'T-07', 'false', '2022-12-06T17:00', '2022-12-06T19:00', '#5ac8fa', '2022-12-04 23:45:37'),
 (86, 'tc009', 'Yoga VIP', 'L2-06', 'false', '2022-12-13T06:00', '2022-12-13T07:30', '#9c26b0', '2022-12-05 00:52:24'),
 (87, 'tc010', 'BODY COMBAT', 'L2-03', 'false', '2022-12-12T17:00', '2022-12-12T18:30', '#009788', '2022-12-05 00:54:00'),
-(88, 'tc001', 'Yoga VIP', 'T-07', 'false', '2022-12-23T05:00', '2022-12-23T06:30', '#f44437', '2022-12-05 00:55:11');
+(88, 'tc001', 'Yoga VIP', 'T-07', 'false', '2022-12-23T05:00', '2022-12-23T06:30', '#f44437', '2022-12-05 00:55:11'),
+(89, 'tc008', 'Zumba', 'L3-01', 'false', '2022-12-07T05:00', '2022-12-07T07:00', '#ea1e63', '2022-12-05 14:10:14');
 
 -- --------------------------------------------------------
 
@@ -282,7 +287,7 @@ INSERT INTO `yourschedule` (`stt`, `idkhachhang`, `title`, `start`, `end`, `conf
 (4, 'mMr0u8XA', 'CRUNCH PLUS', '2022-12-01T17:00', '2022-12-01T18:30', 'false', 'Candy', 'T2-01', 1, '2022-12-03 03:08:37'),
 (5, 'R68ctS7p', 'BODY COMBAT', '2022-11-28T17:45', '2022-11-28T18:15', 'false', 'Miu', 'T4-01', 1, '2022-12-03 03:11:08'),
 (6, 'mMr0u8XA', 'KIT FIT', '2022-12-03T17:00', '2022-12-03T18:15', 'false', 'Kelvin', 'L3-03', 1, '2022-12-03 14:39:50'),
-(7, 'R68ctS7p', 'R68ctS7p', '2022-12-03T18:00', '2022-12-03T19:00', 'false', 'Vicky', 'L3-01', 1, '2022-12-03 18:18:18'),
+(7, 'R68ctS7p', 'Yoga', '2022-12-03T18:00', '2022-12-03T19:00', 'false', 'Vicky', 'L3-01', 1, '2022-12-03 18:18:18'),
 (8, 'LAe516ET', 'Hip Opening', '2022-12-03T17:00', '2022-12-03T18:15', 'false', 'Manju', 'T-07', 1, '2022-12-03 22:26:53');
 
 --
@@ -363,13 +368,13 @@ ALTER TABLE `schedule`
 -- AUTO_INCREMENT cho bảng `tapthu`
 --
 ALTER TABLE `tapthu`
-  MODIFY `stt` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `stt` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT cho bảng `training`
 --
 ALTER TABLE `training`
-  MODIFY `stt` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `stt` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 --
 -- AUTO_INCREMENT cho bảng `yourschedule`

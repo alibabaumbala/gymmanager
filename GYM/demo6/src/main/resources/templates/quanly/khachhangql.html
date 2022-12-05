@@ -116,7 +116,7 @@
             <td th:class="row-genderemp-+${nv.makh}" th:text="${nv.gender}">Otto</td>
             <td th:class="row-positionemp-+${nv.makh}" th:text="${nv.level}">@mdo</td>
             <td th:class="row-point-+${nv.makh}" th:text="${nv.point}">@mdo</td>
-            <td th:class="row-point-+${nv.makh}" th:text="${nv.status}">@mdo</td>
+            <td th:class="row-status-+${nv.makh}" th:text="${nv.status}">@mdo</td>
             <td>
               <i class="uil-comment-edit" style="font-size: 20px" data-toggle="modal" data-target="#editModal" th:attr="onclick=|handleEdit('${nv.makh}')|"></i>
               <i id=deletenv"" class="uil-trash-alt" style="font-size: 20px;color: red" th:attr="onclick=|handleDelete('${nv.makh}')|" ></i>
@@ -130,7 +130,7 @@
   </div>
 </section>
 
-<!--MODAL THÊM NHÂN VIÊN-->
+<!--MODAL THÊM KHÁCH HÀNG-->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -144,11 +144,7 @@
         <form class="needs-validation" novalidate>
           <div class="form-group">
             <label for="tennv" class="col-form-label">Họ tên</label>
-            <input required type="text" class="form-control is-invalid" id="tennv" name="tennv" pattern="[a-z\sA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]{1,255}" >
-            <div class="invalid-feedback">
-              Nhập tên khách hàng
-            </div>
-            <div class="valid-feedback">Valid.</div>
+            <input required type="text" placeholder="Nhập tên khách hàng" class="form-control is-invalid" id="tennv" name="tennv" pattern="[a-z\sA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]{1,255}" >
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="genderemp" id="inlineRadio1" value="Male" checked>
@@ -160,21 +156,15 @@
           </div>
           <div class="form-group">
             <label for="sdtnv" class="col-form-label">Số điện thoại</label>
-            <input required type="tel" id="sdtnv" name="sdtnv" class="form-control is-invalid" pattern="[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
-            <div class="invalid-feedback">
-              Nhập số điện thoại
-            </div>
+            <input required type="tel" id="sdtnv" placeholder="Nhập số điện thoại" name="sdtnv" class="form-control is-invalid" pattern="[0]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
           </div>
           <div class="form-group">
             <label for="emailnv" class="col-form-label">Email</label>
-            <input type="email" id="emailnv" name="emailnv" class="form-control is-invalid" required>
-            <div class="invalid-feedback">
-              Nhập email nhân viên
-            </div>
+            <input type="email" id="emailnv" placeholder="Nhập địa chỉ email" name="emailnv" class="form-control is-invalid" required>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
-            <button type="button" class="btn btn-primary" id="themnv" >Thêm</button>
+            <button type="button" class="btn btn-primary" id="themnv" disabled >Thêm</button>
           </div>
         </form>
       </div>
@@ -183,7 +173,7 @@
 </div>
 
 
-<!--MODAL SỬA NHÂN VIÊN-->
+<!--MODAL SỬA KHÁCH HÀNG-->
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -194,18 +184,18 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form class="needs-validation" novalidate>
           <div class="form-group">
             <label for="tennv" class="col-form-label">Họ tên khách hàng</label>
-            <input required type="text" class="form-control" id="tennvedit" name="tennv" pattern="[a-z\sA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]{1,255}" >
+            <input required type="text" class="form-control is-invalid" id="tennvedit" name="tennv" pattern="[a-z\sA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]{1,255}" >
           </div>
           <div class="form-group">
             <label for="sdtnv" class="col-form-label">Số điện thoại</label>
-            <input required type="tel" id="sdtnvedit" name="sdtnv" class="form-control" pattern="[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
+            <input required type="tel" id="sdtnvedit" name="sdtnv" class="form-control is-invalid" pattern="[0]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
           </div>
           <div class="form-group">
             <label for="emailnv" class="col-form-label">Email</label>
-            <input type="email" id="emailnvedit" name="emailnv" class="form-control" required>
+            <input type="email" id="emailnvedit" name="emailnv" class="form-control is-invalid" required>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="genderempedit" id="genderedit1" value="Male" checked>
@@ -221,7 +211,13 @@
               <option value="KHÁCH HÀNG THƯỜNG">Khách hàng thường</option>
               <option value="KHÁCH HÀNG VIP">Khách hàng VIP</option>
             </select>
-          </div>
+            <div class="form-group">
+              <label for="leveledit">Tình trạng</label>
+              <select class="form-control" id="tinhtrang" name="tinhtrang">
+                <option value="Chờ duyệt">Chờ duyệt</option>
+                <option value="Hoạt động">Hoạt động</option>
+              </select>
+            </div>
         </form>
       </div>
       <div class="modal-footer">
@@ -239,6 +235,29 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js'></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <script>
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('change', function(event) {
+
+          if (form.checkValidity() === false)
+          {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+          if(form.checkValidity()===true)
+          {
+            $("#themnv").prop('disabled', false)
+          }
+        }, false);
+      });
+    }, false)
+  })();
+
   function inds()
   {
     $.get("http://localhost:8080/employee/quanly/quanly-khachhang/in", function(data, status){
@@ -338,14 +357,25 @@
       },
       success: function (response)
       {
+        console.log(response)
+        $('#sdtnvedit').val(response.sdtkh)
         $('#tennvedit').val(response.tenkh)
         $('#emailnvedit').val(response.emailkh)
-        $('#sdtnvedit').val(response.sdtkh)
+
         if(response.gender=='Male')
           $('#genderedit1').prop("checked",true)
         if(response.gender=='Female')
           $('#genderedit2').prop("checked",true)
         $('#confirmedit').attr('valueidedit',uid);
+        if(response.level=='KHÁCH HÀNG VIP')
+          document.getElementById("leveledit").selectedIndex = 1
+        if(response.level=='KHÁCH HÀNG THƯỜNG')
+          document.getElementById("leveledit").selectedIndex = 0
+        if(response.status=='Chờ duyệt')
+          document.getElementById("tinhtrang").selectedIndex = 0
+        if(response.status=='Hoạt động')
+          document.getElementById("tinhtrang").selectedIndex = 1
+
       }
     });
   }
@@ -362,7 +392,8 @@
       level:$('#leveledit').val(),
       sdtkh:$('#sdtnvedit').val(),
       gender:Array.from(radioButtonGroupGender).find((radio) => radio.checked).value,
-      level:$("#leveledit").val()
+      level:$("#leveledit").val(),
+      status:$('#tinhtrang').val()
     }
 
     $.ajax({
@@ -385,7 +416,7 @@
           $('.row-emailemp-'+uid).text(response.emailkh)
           $('.row-genderemp-'+uid).text(response.gender)
           $('.row-positionemp-'+uid).text(response.level)
-
+          $('.row-status-'+uid).text(response.status)
           $('#huyedit').click()
         })
       },

@@ -45,6 +45,7 @@
           <div class="name_id">
             <p class="name-profile" style="text-transform: uppercase" th:text="${user.tenkh}"></p>
             <P>Mã thẻ: <b th:text="${user.makh}"></b></p>
+            <P><b th:text="${user.status}" th:if="${user.status}=='Chờ duyệt'" style="color: #a50000;font-size: 18px"></b></p>
           </div>
         </div>
         <div class="slide-profile-main tichluy_diem">
@@ -165,19 +166,19 @@
                 <div class="col-12 col-md-6">
                   <div class="form-group">
                     <label for="">Mật khẩu hện tại <b style="color: #a50000" id="dmk">Đổi mật khẩu</b></label>
-                    <input type="password" class="form-control thongtincanhanh-input" id="password" name="password" aria-describedby="" placeholder="" disabled th:field="*{password}">
+                    <input type="password" class="form-control thongtincanhanh-input" id="password" name="password" aria-describedby="" placeholder="" disabled th:field="*{password}" pattern=".{6,}">
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
                   <div class="form-group">
                     <label for="">Xác nhận mật khẩu</label>
-                    <input type="password" class="form-control thongtincanhanh-input" id="confirm_password" name="repassword" aria-describedby="" placeholder="" disabled>
+                    <input type="password" class="form-control thongtincanhanh-input" id="confirm_password" name="repassword" aria-describedby="" placeholder="" disabled pattern=".{6,}">
                   </div>
                 </div>
               </div>
               <b id="message" style="font-size: 16px"></b>
               <div class="btn-search" style="width: fit-content;margin:0 auto;margin-top: 10px;">
-                <button id="luu" type="submit" class="btn-search-click" style="padding: 20px 20px;background-color: #a50000" >Lưu</button>
+                <button id="luu" type="submit" class="btn-search-click" style="padding: 20px 20px;background-color: #a50000" th:if="${user.status}=='Hoạt động'">Lưu</button>
               </div>
             </div>
           </form>

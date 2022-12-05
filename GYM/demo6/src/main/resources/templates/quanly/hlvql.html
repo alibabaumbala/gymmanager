@@ -137,10 +137,9 @@
           <div class="form-group">
             <label for="tennv" class="col-form-label">Họ tên HLV</label>
             <input required type="text" class="form-control is-invalid" id="tennv" name="tennv" pattern="[a-z\sA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]{1,255}" >
-            <div class="invalid-feedback">
-              Nhập tên HLV
-            </div>
-            <div class="valid-feedback">Valid.</div>
+<!--            <div class="invalid-feedback">-->
+<!--              Nhập tên HLV-->
+<!--            </div>-->
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="genderemp" id="inlineRadio1" value="Male" checked>
@@ -152,28 +151,28 @@
           </div>
           <div class="form-group">
             <label for="sdtnv" class="col-form-label">Số điện thoại</label>
-            <input required type="tel" id="sdtnv" name="sdtnv" class="form-control is-invalid" pattern="[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
-            <div class="invalid-feedback">
-              Nhập số điện thoại
-            </div>
+            <input required type="tel" id="sdtnv" name="sdtnv" class="form-control is-invalid" pattern="[0]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
+<!--            <div class="invalid-feedback">-->
+<!--              Nhập số điện thoại-->
+<!--            </div>-->
           </div>
           <div class="form-group">
             <label for="emailnv" class="col-form-label">Email</label>
             <input type="email" id="emailnv" name="emailnv" class="form-control is-invalid" required>
-            <div class="invalid-feedback">
-              Nhập email HLV
-            </div>
+<!--            <div class="invalid-feedback">-->
+<!--              Nhập email HLV-->
+<!--            </div>-->
           </div>
           <div class="form-group">
             <label for="passnv" class="col-form-label">Mật khẩu</label>
-            <input type="password" id="passnv" name="passnv" class="form-control is-invalid" required>
-            <div class="invalid-feedback">
-              Nhập tên mật khẩu
-            </div>
+            <input type="password" id="passnv" name="passnv" class="form-control is-invalid" pattern=".{6,}" required>
+<!--            <div class="invalid-feedback">-->
+<!--              Nhập tên mật khẩu-->
+<!--            </div>-->
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
-            <button type="button" class="btn btn-primary" id="themnv" >Thêm</button>
+            <button type="button" class="btn btn-primary" id="themnv" disabled>Thêm</button>
           </div>
         </form>
       </div>
@@ -193,10 +192,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form class="needs-validation" novalidate>
           <div class="form-group">
             <label for="tennv" class="col-form-label">Họ tên nhân viên</label>
-            <input required type="text" class="form-control" id="tennvedit" name="tennv" pattern="[a-z\sA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]{1,255}" >
+            <input required type="text" class="form-control is-invalid" id="tennvedit" name="tennv" pattern="[a-z\sA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]{1,255}" >
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="genderempedit" id="genderedit1" value="Male" checked>
@@ -208,11 +207,11 @@
           </div>
           <div class="form-group">
             <label for="sdtnv" class="col-form-label">Số điện thoại</label>
-            <input required type="tel" id="sdtnvedit" name="sdtnv" class="form-control" pattern="[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
+            <input required type="tel" id="sdtnvedit" name="sdtnv" class="form-control is-invalid" pattern="[0]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
           </div>
           <div class="form-group">
             <label for="emailnv" class="col-form-label">Email</label>
-            <input type="email" id="emailnvedit" name="emailnv" class="form-control" required>
+            <input type="email" id="emailnvedit" name="emailnv" class="form-control is-invalid" required>
           </div>
         </form>
       </div>
@@ -234,25 +233,28 @@
 
 
   //VALID BOOTSTRAP
-  // (function() {
-  //   'use strict';
-  //   window.addEventListener('load', function() {
-  //     var forms = document.getElementsByClassName('needs-validation');
-  //     // Loop over them and prevent submission
-  //     var validation = Array.prototype.filter.call(forms, function(form) {
-  //       form.addEventListener('submit', function(event) {
-  //         if (form.checkValidity() === false)
-  //         {
-  //           event.preventDefault();
-  //           event.stopPropagation();
-  //           $("#themnv").prop('disabled', false)
-  //         }
-  //         form.classList.add('was-validated');
-  //       }, false);
-  //     });
-  //   }, false)
-  //   console.log(true)
-  // })();
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('change', function(event) {
+
+          if (form.checkValidity() === false)
+          {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+          if(form.checkValidity()===true)
+          {
+            $("#themnv").prop('disabled', false)
+          }
+        }, false);
+      });
+    }, false)
+  })();
 
 
   function inds()

@@ -36,8 +36,8 @@ public interface KhachhangRepository extends JpaRepository<Khachhang,Integer> {
 
     @Modifying
     @Transactional
-    @Query("update Khachhang s set s.tenkh =?1, s.sdtkh =?2,s.emailkh =?3,s.gender=?4,s.level=?5 where s.makh = ?6")
-    void updateKHFromAdmin(String name, String sdt, String email,String gender,String level,String id);
+    @Query("update Khachhang s set s.tenkh =?1, s.sdtkh =?2,s.emailkh =?3,s.gender=?4,s.level=?5,s.status=?6 where s.makh = ?7")
+    void updateKHFromAdmin(String name, String sdt, String email,String gender,String level,String status,String id);
 
 
 }
