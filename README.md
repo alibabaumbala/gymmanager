@@ -6,7 +6,7 @@ Import file gym.sql lên xampp
 <p>Công nghệ sử dụng: Java Spring Boot, Thymleaf, MySQL, HTML, CSS, JavaScript, Jquery, SCSS</p>
 <p>Trang web giới thiệu các thông tin, dịch vụ của phòng Gym. Khách hàng mới có thể đăng ký tập thử để trải nghiệm dịch vụ. Và có thể đăng ký tài khoản để trở thành thành viên của phòng tập.</p>
 <div>
-<img src =""/>
+<img src ="https://drive.google.com/file/d/1UU6swuvzOq-qwgfCwMe-k8umsPkKo1Os/view?usp=sharing"/>
 <p>Giao diện trang chủ của website</p>
 </div>
 <div style="margin-top:20px">
