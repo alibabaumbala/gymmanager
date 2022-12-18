@@ -6,7 +6,7 @@ Import file gym.sql lên xampp
 <p>Công nghệ sử dụng: Java Spring Boot, Thymleaf, MySQL, HTML, CSS, JavaScript, Jquery, SCSS</p>
 <p>Trang web giới thiệu các thông tin, dịch vụ của phòng Gym. Khách hàng mới có thể đăng ký tập thử để trải nghiệm dịch vụ. Và có thể đăng ký tài khoản để trở thành thành viên của phòng tập.</p>
 <div>
-<img src ="" style="width:100%">
+<img src ="https://res.cloudinary.com/dnqk5fjla/image/upload/v1671389438/6_yz4xtx.png" style="width:100%">
 <p>Giao diện trang chủ của website</p>
 </div>
 <div style="margin-top:20px">
@@ -24,10 +24,6 @@ Import file gym.sql lên xampp
 <div style="margin-top:20px">
 <img src ="https://res.cloudinary.com/dnqk5fjla/image/upload/v1671389244/4_rmsko3.png"/>
 <p>Giao diện xem thông tin cả nhân</p>
-</div>
-<div style="margin-top:20px">
-<img src ="https://res.cloudinary.com/dnqk5fjla/image/upload/v1671389247/2_eowcnv.png"/>
-<p>Giao diện đăng ký tập thử</p>
 </div>
 <div style="margin-top:20px">
 <img src =""/>
