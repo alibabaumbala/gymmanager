@@ -36,6 +36,7 @@ Import file gym.sql lên xampp
 </div>
 <div style="margin-top:20px">
 <b>Actor Quản lý sẽ có các chức năng: CURD: nhân viên, khách hàng, huấn luyện viên. Xếp lịch giảng dạy cho từng HLV</b>
+<img src="https://res.cloudinary.com/dnqk5fjla/image/upload/v1671389061/lich_sy6qk9.png"/>
 </div>
 <div style="margin-top:20px">
 <b>Actor Lễ tân sẽ có các chức năng: CURD: Khách hàng, xem lịch dạy của HLV, đăng ký lịch tập cho khách hàng</b>
